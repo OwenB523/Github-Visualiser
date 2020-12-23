@@ -1,0 +1,28 @@
+ <!DOCTYPE html>
+ <script> 
+function printRepoCount() {
+var user = document.getElementById("user").value;
+var responseObj = JSON.parse(this.responseText);
+document.write(user + " has " + responseObj.public_repos + " public repositories!");
+}
+function getRepos() {
+var user = document.getElementById("user").value;
+let url = `https://api.github.com/users/${user}`;
+var request = new XMLHttpRequest();
+request.onload = printRepoCount;
+request.open('get', url, true)
+request.send()
+}
+</script>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+        <label for="user">User:</label><br>
+        <input id="user" type="text"><br>
+    <button onclick="getRepos()">Submit </button> 
+ </body>
+ </html>
