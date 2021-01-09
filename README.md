@@ -1,2 +1,2 @@
 # Github-Visualiser
-The html file takes the username as an input and outputs the number of public repositories of the user as an output
+This program takes the username and user authorisation token of a github user as an input and outputs various charts and pieces of information about the users software engineering process. These charts measure the commits by day, the most common languages used and the amount of commits additions and deletions in each repository. The webpage is hosted on Github pages at https://owenb523.github.io/Github-Visualiser/ . 
